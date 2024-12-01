@@ -1,0 +1,75 @@
+Annotations liées à Spring Boot et Spring Data
+
+@SpringBootApplication
+Indique le point d'entrée principal de l'application Spring Boot.
+Configure automatiquement le contexte de l'application et les composants.
+
+@Service
+Marque une classe comme un service métier.
+Indique à Spring qu'il doit gérer cette classe en tant que composant injectable.
+
+@Transactional
+Gère les transactions de base de données de manière automatique.
+Toutes les opérations dans une méthode annotée sont exécutées dans une seule transaction.
+
+@Bean
+
+Permet de définir un composant géré par Spring directement dans une méthode (ex. : CommandLineRunner).
+Annotations liées à JPA/Hibernate
+
+@Entity
+Définit une classe comme une entité persistante (liée à une table de base de données).
+
+@Table(name = "NOM_TABLE")
+Renomme la table associée à l'entité pour éviter les conflits avec des mots réservés (ex. : USER ou ROLE).
+
+@Id
+Spécifie le champ utilisé comme clé primaire pour une entité.
+
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+Indique que la clé primaire sera générée automatiquement par la base de données (ex. : auto-incrémentation).
+
+@Column(nullable = true/false, unique = true, length = X)
+Configure les propriétés d'une colonne dans la table de la base de données :
+nullable : Permet ou interdit les valeurs nulles.
+unique : Implique l'unicité.
+length : Définit la longueur maximale pour les chaînes.
+
+@ManyToMany
+Définit une relation "plusieurs à plusieurs" entre deux entités.
+Peut spécifier des options comme fetch = FetchType.EAGER (chargement immédiat).
+
+@JoinTable (non utilisé ici mais souvent utile)
+Personnalise la table de jointure dans une relation @ManyToMany.
+
+@MappedBy
+Utilisé sur l'entité "esclave" d'une relation bidirectionnelle pour indiquer que l'autre entité gère la relation.
+
+
+Annotations liées à Lombok
+
+@Data
+Génère automatiquement les méthodes getter, setter, toString, equals, et hashCode.
+
+@NoArgsConstructor
+Génère un constructeur sans arguments.
+
+@AllArgsConstructor
+Génère un constructeur avec tous les champs de la classe.
+
+@ToString.Exclude
+Exclut un champ particulier de la méthode toString (utile pour éviter les boucles infinies dans les relations bidirectionnelles).
+
+
+Autres annotations
+
+@Override
+Indique qu'une méthode redéfinit une méthode héritée.
+Aide à détecter les erreurs si la signature de la méthode ne correspond pas.
+Intérêt global
+
+Ces annotations permettent :
+
+De simplifier la configuration (Spring Boot, JPA, Lombok).
+D’automatiser les opérations complexes (gestion des relations, transactions).
+De garantir la cohérence et la lisibilité (génération automatique de code, suppression du code répétitif).

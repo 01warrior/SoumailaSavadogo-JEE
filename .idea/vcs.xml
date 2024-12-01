@@ -2,9 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/instanciation_dynamique_" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/instanciation_statique_" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/spring_annotation_" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/spring_xml_" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gestion_produit_jpa" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hospital" vcs="Git" />
   </component>
 </project>
